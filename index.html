@@ -9,9 +9,159 @@
       <link rel="stylesheet" href="style.css">
       
       <title>Online Shopping Portal</title>
-  </head>
-  <body>
-      <!-- Your code goes here -->
-      <script src="script.js"></script>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+        @media only screen and (max-width: 420px) {
+          .dis{
+            display:none;
+          }
+          
+        }
+        @media only screen and (max-width: 420px) {
+          .in{
+            display:block;
+          }
+          
+        }
+        body, html {
+          height: 100%;
+          line-height: 1.8;
+        }
+        .siz{
+          font-size: 3.2em;
+        }
+        .lef{
+          padding-left:40%
+        }
+        /* .imga{
+          position:relative;
+          background-image: url('./assets/images/Vector.png');
+          width:100%;
+          background-position: center;
+          background-size: cover;
+        } */
+        /* Full height image header */
+        .bgimg-1 {
+          background-position: center;
+          background-size: cover;
+          background-color:#6DECEC;
+          min-height: 100%;
+        }
+        
+        .w3-bar .w3-button {
+          padding: 16px;
+        }
+        </style>
+        </head>
+        <body>
+        
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+          <div class="w3-bar w3-yellow w3-card" id="myNavbar">
+            <!-- Right-sided navbar links -->
+            <div class="in">
+            <a href="#home" style="padding-left:60px" class="w3-bar-item w3-button w3-wide">LOGO</a>
+
+            </div>
+            <div  class="w3-center w3-hide-small">
+             <div>
+              <a href="#about" class="w3-bar-item w3-button" style="padding-left:20%">About</a>
+              <a href="#team" class="w3-bar-item w3-button" style="padding-left:8%"></i> Service</a>
+              <a href="#work" class="w3-bar-item w3-button" style="padding-left:8%"></i>Product</a>
+              <a href="#" class="w3-bar-item w3-button" style="padding-left:8%"> Search</a>
+             </div>
+            </div>
+            <div class="dis">
+              <a href="#" class="w3-bar-item w3-button" > <input type="text" style="border-radius:10px"><span style="padding-left:20px"><i class="fa fa-search"></i></span></a>
+              <a href="#" class="w3-bar-item w3-button "> <img class="dis" src="./assets/icons/Group 3.svg" alt=""></a>
+            </div>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+        
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Sidebar on small screens when clicking the menu icon -->
+        <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+          <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+          <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+          <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">Service</a>
+          <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">Product</a>
+  
+        </nav>
+
+      <div class="bgimg-1">
+        <div class="w3-row-padding">
+          <div class="w3-half w3-container w3-margin-bottom">
+            <div class="w3-row-padding" style="margin-top:20%">
+              <div style="display: inline-block">
+              <P style="color: white" class="siz">Online</P>
+              <p style="color: white" class="siz">Shopping</p>
+              </div>
+              <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, facere? Distinctio pariatur modi quia laborum veniam voluptatem facere molestias ducimus explicabo quisquam exercitationem consectetur quo aspernatur vitae, est odio quidem.</div>
+            <div class="w3-row-padding">
+                  <div class="w3-third w3-container w3-margin-bottom">
+                    <img src="./assets/images/unsplash_1SAnrIxw5OY.jpg" alt="">
+                    </div>
+                  <div class="w3-third w3-container w3-margin-bottom">
+                  <img src="./assets/images/unsplash_7OFnb7NOvjw.jpg" alt="">
+                  </div>
+                <div class="w3-third w3-container w3-margin-bottom">
+                    <img src="./assets/images/unsplash_B2w4rdIihEo.jpg" alt="">
+                 </div>
+            </div>
+
+          
+        </div>
+      </div>
+      <div>
+        <div class="w3-half w3-container>
+          <div class="w3-half w3-container w3-margin-bottom">
+            <div class="w3-row-padding lef" style="margin-top:20%">
+  
+            <div>
+              <img src="./assets/icons/mobile.svg" alt="">
+            </div>
+            </div>
+        </div>
+        </div>
+      </div>
+      <footer>
+        <div class="imga"></div>
+      </footer>
+        
+      
+         
+        <script>
+        // Modal Image Gallery
+        function onClick(element) {
+          document.getElementById("img01").src = element.src;
+          document.getElementById("modal01").style.display = "block";
+          var captionText = document.getElementById("caption");
+          captionText.innerHTML = element.alt;
+        }
+        
+        
+        // Toggle between showing and hiding the sidebar when clicking the menu icon
+        var mySidebar = document.getElementById("mySidebar");
+        
+        function w3_open() {
+          if (mySidebar.style.display === 'block') {
+            mySidebar.style.display = 'none';
+          } else {
+            mySidebar.style.display = 'block';
+          }
+        }
+        
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+        }
+        </script>
   </body>
   </html>
